@@ -1,0 +1,21 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+*.DotSettings.user
+
+## NuGet
+*.nupkg
+packages/
+
+## Build
+[Dd]ebug/
+[Rr]elease/
+publish/
+
+## IDE
+.idea/
+.vscode/
+*.swp
