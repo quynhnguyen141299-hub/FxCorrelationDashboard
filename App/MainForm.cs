@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Windows.Forms;
 using FxCorrelationDashboard.Data;
 using FxCorrelationDashboard.Engine;
@@ -47,7 +47,10 @@ public partial class MainForm : Form
 
         _pairCombo = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 120 };
         PopulatePairCombo();
-        _basketCombo.SelectedIndexChanged += (_, _) => PopulatePairCombo();
+
+        _basketCombo.SelectedIndexChanged += (_, _) => { PopulatePairCombo(); RefreshDashboard(); };
+        _windowCombo.SelectedIndexChanged += (_, _) => RefreshDashboard();
+        _pairCombo.SelectedIndexChanged += (_, _) => RefreshDashboard();
 
         _refreshBtn = new Button { Text = "Refresh", Width = 80 };
         _refreshBtn.Click += (_, _) => RefreshDashboard();
@@ -89,7 +92,6 @@ public partial class MainForm : Form
             var basketName = _basketCombo.SelectedItem!.ToString()!;
             var fxPairs = _baskets[basketName];
             int window = int.Parse(_windowCombo.SelectedItem!.ToString()!.Replace("d", ""));
-
             var from = DateTime.Today.AddYears(-3);
             var to = DateTime.Today;
 
@@ -112,7 +114,7 @@ public partial class MainForm : Form
             int pairIdx = Array.IndexOf(fxPairs, selectedPair);
             if (pairIdx < 0) pairIdx = 0;
 
-            RenderFullSampleBar(allSeries[pairIdx], allSeries.Skip(fxPairs.Length).ToArray());
+            RenderBarChart(allSeries[pairIdx], allSeries.Skip(fxPairs.Length).ToArray(), window);
         }
         catch (Exception ex)
         {
@@ -126,7 +128,6 @@ public partial class MainForm : Form
         var model = new PlotModel { Title = "Correlation Heatmap" };
         int n = names.Length;
 
-        // CategoryAxis with Key so the HeatMapSeries binds to them
         var catX = new CategoryAxis
         {
             Position = AxisPosition.Bottom,
@@ -173,22 +174,23 @@ public partial class MainForm : Form
     }
 
     /// <summary>
-    /// Right panel: full-sample correlation bar chart (base FX pair vs each macro factor).
+    /// Right panel: rolling-window correlation bar chart (base FX pair vs each macro factor).
+    /// Uses the last value of the rolling correlation for the selected window.
     /// </summary>
-    private void RenderFullSampleBar(PriceSeries baseSeries, PriceSeries[] macroSeries)
+    private void RenderBarChart(PriceSeries baseSeries, PriceSeries[] macroSeries, int window)
     {
         var model = new PlotModel
         {
-            Title = $"Full-sample correlation: {baseSeries.Name} vs Macro"
+            Title = $"{window}d correlation: {baseSeries.Name} vs Macro"
         };
 
         var catAxis = new CategoryAxis
         {
-            Position = AxisPosition.Left    // BarSeries is horizontal: categories on Y
+            Position = AxisPosition.Left
         };
         var valAxis = new LinearAxis
         {
-            Position = AxisPosition.Bottom, // values on X
+            Position = AxisPosition.Bottom,
             Minimum = -1,
             Maximum = 1,
             Title = "Correlation"
@@ -202,7 +204,10 @@ public partial class MainForm : Form
 
         foreach (var macro in macroSeries)
         {
-            double corr = CorrelationEngine.FullSampleCorrelation(baseSeries, macro);
+            var result = CorrelationEngine.RollingCorrelation(baseSeries, macro, window);
+            double corr = result.RollingCorr.Length > 0
+                ? result.RollingCorr[^1]
+                : 0.0;
             catAxis.Labels.Add(macro.Name);
             barSeries.Items.Add(new BarItem(corr));
         }
