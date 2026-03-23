@@ -2,7 +2,7 @@
 
 A Windows Forms desktop application for visualising rolling and full-sample correlations between G10 FX pairs and macro factors. Built with .NET 8, SQL Server LocalDB, and OxyPlot.
 
-![Dashboard Screenshot](FxCorrelationDashboard/dashboard_screenshot.png)
+<img width="1379" height="783" alt="AppUI" src="https://github.com/user-attachments/assets/b91fe5fc-62aa-422b-8683-7334f609bb7b" />
 
 ## Features
 
