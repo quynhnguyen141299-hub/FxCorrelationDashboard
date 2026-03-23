@@ -1,5 +1,7 @@
 # FX Correlation Dashboard
 
+![FX Correlation Dashboard](docs/screenshot.png)
+
 A Windows Forms application that visualises rolling and full-sample correlations between G10 FX pairs and macro factors (WTI, Brent, US10Y, Silver, Gold).
 
 ## Features
