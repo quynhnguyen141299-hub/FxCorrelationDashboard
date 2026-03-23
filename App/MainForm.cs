@@ -112,7 +112,13 @@ public partial class MainForm : Form
             int pairIdx = Array.IndexOf(fxPairs, selectedPair);
             if (pairIdx < 0) pairIdx = 0;
 
-            RenderFullSampleBar(allSeries[pairIdx], allSeries.Skip(fxPairs.Length).ToArray());
+            RenderFullSampleBar(
+                selectedPair,
+                _macroFactors,
+                matrix,
+                pairIdx,
+                fxPairs.Length
+            );
         }
         catch (Exception ex)
         {
@@ -161,7 +167,7 @@ public partial class MainForm : Form
             Data = matrix,
             Interpolate = false,
             RenderMethod = HeatMapRenderMethod.Rectangles,
-            LabelFontSize = 0.2,
+            LabelFontSize = 10,            // was 0.2 — too small to see
             LabelFormatString = "0.00"
         };
 
@@ -172,23 +178,22 @@ public partial class MainForm : Form
         _heatmapPlot.Model = model;
     }
 
-    /// <summary>
-    /// Right panel: full-sample correlation bar chart (base FX pair vs each macro factor).
-    /// </summary>
-    private void RenderFullSampleBar(PriceSeries baseSeries, PriceSeries[] macroSeries)
+    private void RenderFullSampleBar(string baseName, string[] macroNames,
+        double[,] matrix, int baseIndex, int macroStartIndex)
     {
         var model = new PlotModel
         {
-            Title = $"Full-sample correlation: {baseSeries.Name} vs Macro"
+            Title = $"Full-sample correlation: {baseName} vs Macro"
         };
 
         var catAxis = new CategoryAxis
         {
-            Position = AxisPosition.Left    // BarSeries is horizontal: categories on Y
+            Position = AxisPosition.Left
         };
+
         var valAxis = new LinearAxis
         {
-            Position = AxisPosition.Bottom, // values on X
+            Position = AxisPosition.Bottom,
             Minimum = -1,
             Maximum = 1,
             Title = "Correlation"
@@ -200,10 +205,10 @@ public partial class MainForm : Form
             LabelFormatString = "{0:0.00}"
         };
 
-        foreach (var macro in macroSeries)
+        for (int i = 0; i < macroNames.Length; i++)
         {
-            double corr = CorrelationEngine.FullSampleCorrelation(baseSeries, macro);
-            catAxis.Labels.Add(macro.Name);
+            double corr = matrix[baseIndex, macroStartIndex + i];
+            catAxis.Labels.Add(macroNames[i]);
             barSeries.Items.Add(new BarItem(corr));
         }
 
