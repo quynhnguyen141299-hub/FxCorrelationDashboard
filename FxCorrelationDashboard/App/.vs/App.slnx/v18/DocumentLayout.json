@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\data\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:data\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\data\\fxdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:data\\fxdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\engine\\correlationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:engine\\correlationengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|c:\\users\\haile\\fxcorrelationdashboard\\fxcorrelationdashboard\\app\\engine\\returncalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4195E981-2360-7259-32C6-BB2CA129A715}|App.csproj|solutionrelative:engine\\returncalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Data\\Models.cs",
+              "RelativeDocumentMoniker": "Data\\Models.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Data\\Models.cs",
+              "RelativeToolTip": "Data\\Models.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:30:09.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FxDataRepository.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Data\\FxDataRepository.cs",
+              "RelativeDocumentMoniker": "Data\\FxDataRepository.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Data\\FxDataRepository.cs",
+              "RelativeToolTip": "Data\\FxDataRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:30:28.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:28:29.815Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CorrelationEngine.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Engine\\CorrelationEngine.cs",
+              "RelativeDocumentMoniker": "Engine\\CorrelationEngine.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Engine\\CorrelationEngine.cs",
+              "RelativeToolTip": "Engine\\CorrelationEngine.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:28:14.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReturnCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Engine\\ReturnCalculator.cs",
+              "RelativeDocumentMoniker": "Engine\\ReturnCalculator.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Engine\\ReturnCalculator.cs",
+              "RelativeToolTip": "Engine\\ReturnCalculator.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:27:36.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:25:43.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\haile\\FxCorrelationDashboard\\FxCorrelationDashboard\\App\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T17:25:28.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
